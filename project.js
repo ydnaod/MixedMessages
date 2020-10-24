@@ -12,14 +12,18 @@ function createMessage(){
     const message = [];
     for(i=0;i<3;i++){
         const rando = Math.floor(Math.random()*3);
+        const rando2 = Math.floor(Math.random()*3);
         if(rando === 1){
-            message.push(good[rando]);
+            message.push(good[rando2]);
         }
         else if(rando === 2){
-            message.push(bad[rando]);
+            message.push(bad[rando2]);
         }
         else{
-            message.push(neutral[rando]);
+            message.push(neutral[rando2]);
         }
     }
+    return message;
 };
+
+console.log(createMessage());
